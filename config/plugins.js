@@ -12,9 +12,7 @@ module.exports = ({ env }) => ({
         endpoint: env("DO_SPACES_ENDPOINT"), // Endpoint del Space
       },
       actionOptions: {
-        upload: {
-          sizeLimit: 10000000, // Tamaño máximo del archivo 10MB
-        }, // Opciones para la acción de carga (normalmente vacío).
+        upload: {}, // Opciones para la acción de carga (normalmente vacío).
         delete: {}, // Opciones para la acción de eliminación (normalmente vacío).
       },
     },
