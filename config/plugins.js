@@ -1,14 +1,14 @@
 module.exports = ({ env }) => ({
   upload: {
     config: {
-      provider: "aws-s3",
+      provider: "strapi-provider-upload-do",
       providerOptions: {
-        accessKeyId: env("DO_SPACE_ACCESS_KEY"), // Clave de acceso
-        secretAccessKey: env("DO_SPACE_SECRET_KEY"), // Clave secreta
-        endpoint: env("DO_SPACE_ENDPOINT"), // Endpoint de tu Space
-        params: {
-          Bucket: env("DO_SPACE_BUCKET"), // Nombre del bucket
-        },
+        key: env("DO_SPACE_ACCESS_KEY"), // Tu clave de acceso
+        secret: env("DO_SPACE_SECRET_KEY"), // Tu clave secreta
+        endpoint: env("DO_SPACE_ENDPOINT"), // El endpoint del Space
+        space: env("DO_SPACE_NAME"), // El nombre del Space
+        directory: env("DO_SPACE_DIRECTORY", "uploads"), // Directorio por defecto
+        cdn: env.bool("DO_SPACE_CDN", false), // Habilitar CDN (true o false)
       },
     },
   },
