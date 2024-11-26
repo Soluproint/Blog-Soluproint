@@ -14,6 +14,7 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "@breezertwo/strapi-provider-upload-digitalocean": "^5.0.1",
     "@strapi/plugin-cloud": "^4.25.17",
     "@strapi/plugin-i18n": "^4.25.13",
     "@strapi/plugin-users-permissions": "^4.25.17",
@@ -23,7 +24,6 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
-    "strapi-provider-upload-do": "^3.6.9",
     "styled-components": "5.3.3"
   },
   "engines": {

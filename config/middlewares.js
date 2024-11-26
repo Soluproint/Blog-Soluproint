@@ -7,8 +7,18 @@ module.exports = [
         useDefaults: true,
         directives: {
           "connect-src": ["'self'", "https:"],
-          "img-src": ["'self'", "data:", "blob:", "*.digitaloceanspaces.com"],
-          "media-src": ["'self'", "data:", "blob:"],
+          "img-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            "https://blog-soluproint.nyc3.digitaloceanspaces.com",
+          ],
+          "media-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            "https://blog-soluproint.nyc3.digitaloceanspaces.com",
+          ],
           upgradeInsecureRequests: null,
         },
       },
