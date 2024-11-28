@@ -12,9 +12,15 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "content": {
+      "type": "blocks"
+    },
     "image": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "allowedTypes": [
         "images",
@@ -23,20 +29,14 @@
         "audios"
       ]
     },
-    "date": {
-      "type": "date"
-    },
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "posts"
     },
-    "content": {
-      "type": "blocks"
-    },
-    "title": {
-      "type": "string"
+    "date": {
+      "type": "date"
     }
   }
 }

@@ -3,13 +3,13 @@ services:
   postgres:
     image: postgres:13
     environment:
-      POSTGRES_USER: soluproint
-      POSTGRES_PASSWORD: soluproint
-      POSTGRES_DB: blog
+      POSTGRES_USER: blog
+      POSTGRES_PASSWORD: blog
+      POSTGRES_DB: strapi
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data_blog:/var/lib/postgresql/data
 volumes:
-  postgres_data:
+  postgres_data_blog:
     external: true
